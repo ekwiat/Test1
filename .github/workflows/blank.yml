@@ -30,7 +30,7 @@ jobs:
       - name: Run Postman tests and export HTML report
   
         run: |
-          newman run kol.json \
+          newman run Kol.json \
           -e sr.json \
             --reporters cli,htmlextra \
             --reporter-htmlextra-export reports/results.html
