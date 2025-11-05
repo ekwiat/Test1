@@ -32,6 +32,8 @@ jobs:
         run: |
           newman run Kol.json \
           -e sr.json \
+          --env-var "username=${{ secrets.USER_POSTMAN }}" \
+          --env-var "password=${{ secrets.PASSWORD_POSTMAN }}" \
             --reporters cli,htmlextra \
             --reporter-htmlextra-export reports/results.html
 
